@@ -15,7 +15,7 @@ app.get("/", function (req, res) {
   res.sendfile("index.html");
 });
 
-//Abro el servidor en el puerto = PUERTO
+//Abro el servidor en el puerto que declare con las CONST
 app.listen(puerto, () => {
   console.log(`Servidor encendido en el puerto ${puerto}`);
 });
