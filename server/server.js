@@ -7,15 +7,19 @@ const puerto = 3000;
 //inicializo express y lo que devuelve lo guardo en app
 const app = express();
 
+console.log();
+
 //middlewares
-app.use(express.static(path.join(__dirname, "./../client/")));
+app.use(express.static(path.join(__dirname, "../client/")));
 
 //Rutas del get
 app.get("/", function (req, res) {
   res.sendfile("index.html");
 });
+
 app.get("/bonito", function (req, res) {
-  res.sendfile("nice.html");
+  /* chanchada feroz*/
+  res.sendfile(path.join(__dirname, "../client", "nice.html"));
 });
 
 //Abro el servidor en el puerto que declare con las CONST
