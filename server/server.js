@@ -14,6 +14,9 @@ app.use(express.static(path.join(__dirname, "./../client/")));
 app.get("/", function (req, res) {
   res.sendfile("index.html");
 });
+app.get("/bonito", function (req, res) {
+  res.sendfile("nice.html");
+});
 
 //Abro el servidor en el puerto que declare con las CONST
 app.listen(puerto, () => {
